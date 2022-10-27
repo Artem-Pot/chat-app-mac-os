@@ -5,29 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/normalize.css"> 
     <title>Chat mac os</title>
 </head>
 <body>
     <div class="conteiner">
 
             <nav class="nav">
-                <div class="nav__profile">
-                    <div class=""><img class="" src="img/menu/menu1.svg" alt="Иконка профиля" width="18" height="18"></div>
-                    <div class=""><img class="" src="img/menu/menu1.svg" alt="Иконка меню" width="18" height="18"></div>
+
+                <div class="nav__box-profile">
+                    <div class="nav__logo"><img src="img/logo.svg" alt="Ico logo" width="29.33" height="19.47"></div>
+                    <div class="nav__ico"><img src="img/profil.png" alt="Ico Profil" width="32" height="32"></div>
                 </div>
-                <div class="nav__menu">
-                    <div class=""><img class="" src="img/menu/menu1.svg" alt="Иконка меню" width="18" height="18"></div>
-                    <div class=""><img class="" src="img/menu/menu2.svg" alt="Иконка меню" width="18" height="18"></div>
-                    <div class=""><img class="" src="img/menu/menu3.svg" alt="Иконка меню" width="18" height=""></div>
-                    <div class=""><img class="" src="img/menu/menu4.svg" alt="Иконка меню" width="15" height="17"></div>
-                    <div class=""><img class="" src="img/menu/menu5.svg" alt="Иконка меню" width="18" height="18"></div>
+                <div class="nav__box-list">
+                    <div class="nav__menu"><img src="img/menu/menu1.svg" alt="Иконка меню" width="18" height="18"></div>
+                    <div class="nav__menu nav__menu_activ"><img src="img/menu/menu2.svg" alt="Иконка меню" width="18" height="18"></div>
+                    <div class="nav__menu"><img src="img/menu/menu3.svg" alt="Иконка меню" width="18" height=""></div>
+                    <div class="nav__menu"><img src="img/menu/menu4.svg" alt="Иконка меню" width="15" height="17"></div>
+                    <div class="nav__menu"><img src="img/menu/menu5.svg" alt="Иконка меню" width="18" height="18"></div>
                 </div>
 
-
+                <div class="nav__box-settings">
+                    <div class="nav__settings"><img src="img/settings.svg" alt="Ico logo" width="16.6" height="18"></div>
+                    <div class="nav__exit"><img src="img/exit.svg" alt="Ico Profil" width="18" height="16.98"></div>
+                </div>
             </nav>
-        </div>
 
-        <section class="list"></section>
+
+            <section class="contact-list">
+                <div class="contact-list__box-title">
+                    <h1 class="contact-list__title">Messages</h1>
+
+                    <form class="form-search">
+                        <input type="search" name="search" id="search" required placeholder="Search">
+                        <button class="form-search__button" type="submit"></button>
+                    </form>
+
+                    <div class="contact-list__sort">
+                        <span class="contact-list__text">Sort by</span>
+                        <span class="contact-list__tex2">Newest</span>
+                        <div class="contact-list__img-sort"></div>
+                    </div>
+                </div>
+
+                <div class="contact-list__box-contact">
+                    <div class="contact-list__correspondence">
+                        <div class="contact-list__ico contact-list__ico_online"></div>
+                        <div class="contact-list__nick">
+                            <div class="note"></div>
+                            <span class="contact-list__nick-name">John Doe</span>
+                            <span class="contact-list__message">How are you doing?</span>
+                        </div>
+                        <div class="contact-list__date-time">
+                            <span class="contact-list__time"><time>16:45</time></span>
+                            <div class="contact-list__status contact-list__status_read"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+     </div>
+
         <section class="messages"></section>
         <section class="profile"></section>
     </div>
