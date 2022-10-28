@@ -76,19 +76,18 @@ body {
 .nav__exit {
     margin-top: 24px;
 }
-
 /*----------------------Список контактов--------------------*/
-.contact-list {
+.contact {
     max-width: 343px;
 }
 
-.contact-list__box-title {
+.contact__box-title {
     margin-top: 27px;
     width: 291px;
     height: 104px;
 }
 
-.contact-list__title {
+.contact__title {
     font-family: 'SF Pro Text';
     font-style: normal;
     font-weight: 700;
@@ -129,17 +128,22 @@ input[type="search"]:focus {
     margin: 13px 0 0 12px;
 }
 
-.contact-list__sort {
+.contact__sort {
     margin-top: 11px;
     display: flex;
     align-items: center;
 }
 
-.contact-list__text {
+.contact__text {
     padding-left: 12px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.65);
 }
 
-.contact-list__tex2 {
+.contact__tex2 {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -148,7 +152,7 @@ input[type="search"]:focus {
     padding-left: 8px;
 }
 
-.contact-list__img-sort {
+.contact__img-sort {
     background: url(../img/img-sort.svg) no-repeat center center;
     width: 4.95px;
     height: 3.3px;
@@ -156,33 +160,46 @@ input[type="search"]:focus {
     padding-left: 7px;
 }
 
-.contact-list__box-contact {
+.contact__box-contact {
     display: flex;
     width: 316px;
     height: 54px;
-    background-color: brown;
-
+    position: relative;
 }
 
-.contact-list__correspondence {
+.contact__box-contact:hover {
+    outline: 1px solid #27AE60;
+    cursor: pointer;
+}
+
+.contact__box-contact_typing {
+    background-color: #EEEEEE;
+}
+
+.contact__box-contact img{
+    margin-top: 10px;
+}
+
+.contact__wrapper {
     margin-left: 12px;
     display: flex;
     align-items: center;
     flex-direction:column;
+    margin-top: 10px;
 }
 
-.contact-list__ico {
-
+.contact__ico_online {
+    background: url(../img/ellipse.svg) no-repeat;
+    width: 8px;
+    height: 8px;
+    margin: 36px 0 0 29px;
+    position: absolute;
 }
-
-.contact-list__ico_online {
-
-}
-
-.contact-list__nick {
+   
+.contact__nick {
     display: flex;
     justify-content: space-between;
-    background-color: chocolate;
+    align-items: center;
     height: 16px;;
     width: 253px;
 }
@@ -190,47 +207,110 @@ input[type="search"]:focus {
     background: url(../img/notes.svg) no-repeat center center;
     width: 9.55px;
     height: 9.55px;
-
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
 }
 
-.contact-list__nick-name {
+.contact__nick-name {
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.85);
+    min-width: 150px;
+    height: 16px;
+}
+
+.contact__nick-name_note {
     padding-left: 16px;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
     color: rgba(0, 0, 0, 0.85);
-    width: 98px;
+    min-width: 150px;
     height: 16px;
 }
 
-
-.contact-list__date-time {
+.contact__date-time {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 16px;;
     width: 253px;
-    background-color: chartreuse;
+    margin-top: 2px;
 }
 
-.contact-list__message {
-    ont-style: normal;
+.contact__message {
+    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
     color: rgba(0, 0, 0, 0.45);
-
 }
 
-
-.contact-list__time {
-
+.contact__message_not-viewed {
+    color: rgba(0, 0, 0, 0.85);
 }
 
-.contact-list__status {
-
+.contact__message_typing {
+    color: #27AE60;
+    margin-left: 12px;
 }
 
-.contact-list__status_read {
-
+.contact__time {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.65);
 }
+
+.contact__status {
+    background: url(../img/status.svg) no-repeat center center;
+    width:10.95px;
+    height:6.01px;
+}
+
+.contact__status_typing {
+    background: url(../img/status-typing.svg) no-repeat center center;
+    width:10.95px;
+    height:6.01px;
+}
+
+.contact__status_read {
+    background: url(../img/status-read.svg) no-repeat center center;
+    width:10.95px;
+    height:6.01px;
+}
+
+.contact__status_shipped {
+    background: url(../img/status-shipped.svg) no-repeat center center;
+    width:8.49px;
+    height:6.01px;
+}
+
+.contact__status_not-viewed{
+    background-color: #27AE60;
+    border-radius: 91px;
+    width: 14px;
+    height: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.contact__status_none {
+    display: none;
+}
+
+/*----------------------Окно с сообщениями --------------------*/
