@@ -4,15 +4,14 @@ body {
 }
 
 .conteiner {
-    margin: 0 auto;
     width: 100%;
-    display: flex;
     min-height: 100vh;
+    display: flex;
+    justify-content:flex-start;
 }
 
 .nav {
-    width: 54px;
-    
+    min-width: 54px;
     background: #FAFAFA;
     display: flex;
     align-items: center;
@@ -79,6 +78,7 @@ body {
 /*----------------------Список контактов--------------------*/
 .contact {
     max-width: 343px;
+    border-right: 1px solid #EEEEEE ;
 }
 
 .contact__box-title {
@@ -195,7 +195,7 @@ input[type="search"]:focus {
     margin: 36px 0 0 29px;
     position: absolute;
 }
-   
+
 .contact__nick {
     display: flex;
     justify-content: space-between;
@@ -268,31 +268,31 @@ input[type="search"]:focus {
     color: rgba(0, 0, 0, 0.65);
 }
 
-.contact__status {
+.status {
     background: url(../img/status.svg) no-repeat center center;
     width:10.95px;
     height:6.01px;
 }
 
-.contact__status_typing {
+.status_typing {
     background: url(../img/status-typing.svg) no-repeat center center;
     width:10.95px;
     height:6.01px;
 }
 
-.contact__status_read {
+.status_read {
     background: url(../img/status-read.svg) no-repeat center center;
     width:10.95px;
     height:6.01px;
 }
 
-.contact__status_shipped {
+.status_shipped {
     background: url(../img/status-shipped.svg) no-repeat center center;
     width:8.49px;
     height:6.01px;
 }
 
-.contact__status_not-viewed{
+.status_not-viewed{
     background-color: #27AE60;
     border-radius: 91px;
     width: 14px;
@@ -309,8 +309,149 @@ input[type="search"]:focus {
     color: #FFFFFF;
 }
 
-.contact__status_none {
+.status_none {
     display: none;
 }
 
 /*----------------------Окно с сообщениями --------------------*/
+.messages {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.messages__header {
+    width: 100%;
+    height: 61px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.messages__box-status {
+    display: flex;
+    align-items: center;
+}
+
+.messages__box-ico {
+    display: flex;
+    align-items: center;
+    margin-left: 11px;
+}
+
+.messages__name-status {
+    display: flex;
+    flex-direction:column;
+    margin-left: 12px;
+}
+
+.messages__name {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.messages__status {
+    margin-top: 4px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #27AE60;
+}
+
+.messages__box-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60px;
+    height: 42px;
+    margin-right: 9px;
+}
+
+.messages__video {
+    background: url(../img/main/video-call.svg) no-repeat center center;
+    width: 18px;
+    height: 12.46px;
+}
+
+.messages__info {
+    background: url(../img/main/info.svg) no-repeat center center;
+    width: 18px;
+    height: 18px;
+}
+
+.messages__main {
+    margin: 0 20px;
+}
+
+.messages__box-departure {
+    display: flex;
+    justify-content: start;
+}
+
+.messages__departure {
+    display: flex;
+    flex-direction:column;
+    
+}
+
+.messages__he-departure {
+    width: auto;
+    height: 41px;
+    background: #F4F4F7;
+    border-radius: 16px;
+    padding: 12px 18px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.85);
+    
+}
+
+.messages__he-departure_img {
+    height: 208px;
+    width:240px;
+}
+
+.messages__he-departure_link {
+    color: #2D9CDB;
+}
+
+.messages__img{
+    height: 240px;
+    width:240px;
+    background-size: cover;
+    background: url(../img/main/img-car-site.jpg) no-repeat;
+    background-position: bottom 32px center;
+}
+
+.messages__text {
+
+}
+
+.messages__time {
+
+}
+
+.messages__me-departure {
+    display: flex;
+    justify-content: end;
+    padding: 12px 18px 6px;
+    height: 55px;
+    background: #F4F4F7;
+    border-radius: 16px 16px 0px 16px;
+    flex-wrap:nowrap
+}
+
+.messages__time-status {
+
+}
+
+.messages__date {
+
+}
