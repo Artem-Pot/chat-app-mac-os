@@ -1,8 +1,4 @@
 
-body {
-    
-}
-
 .conteiner {
     width: 100%;
     min-height: 100vh;
@@ -385,73 +381,108 @@ input[type="search"]:focus {
 }
 
 .messages__main {
-    margin: 0 20px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: #27AE60;
+    border-bottom: 1px solid #EEEEEE;
 }
 
-.messages__box-departure {
+.messages__wrapper {
+    background-color: #2D9CDB;
+    width: calc(100% - 40px);
+    height: 100%;
+    margin: 0 auto;
+}
+
+.messages__box-he {
     display: flex;
-    justify-content: start;
 }
 
-.messages__departure {
+.messages__he {
     display: flex;
     flex-direction:column;
-    
-}
-
-.messages__he-departure {
-    width: auto;
-    height: 41px;
-    background: #F4F4F7;
-    border-radius: 16px;
-    padding: 12px 18px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: rgba(0, 0, 0, 0.85);
-    
-}
-
-.messages__he-departure_img {
-    height: 208px;
-    width:240px;
-}
-
-.messages__he-departure_link {
-    color: #2D9CDB;
+    margin-right: 15px;
+    flex-wrap: wrap;
 }
 
 .messages__img{
     height: 240px;
-    width:240px;
+    width: 240px;
     background-size: cover;
     background: url(../img/main/img-car-site.jpg) no-repeat;
     background-position: bottom 32px center;
+    margin-bottom: -28px;
 }
 
-.messages__text {
+.messages__text{
+    padding: 12px 18px 12px 18px;
+    background: #F4F4F7;
+    border-radius: 16px;
+    margin-bottom: 4px;
+}
 
+.messages__text-time {
+    padding: 12px 18px 6px 18px;
+}
+
+.messages__title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.messages__text_link {
+    color: #2D9CDB;
+}
+
+.messages__text-time {
+    display: flex;
+    flex-direction:column;
 }
 
 .messages__time {
-
+    padding-top: 4px;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.45);
 }
 
-.messages__me-departure {
+.messages__me {
     display: flex;
-    justify-content: end;
-    padding: 12px 18px 6px;
-    height: 55px;
-    background: #F4F4F7;
-    border-radius: 16px 16px 0px 16px;
-    flex-wrap:nowrap
+    flex-direction:column;
+    align-items: flex-end;
+    flex-wrap: wrap;
 }
 
-.messages__time-status {
-
+.messages__me-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-.messages__date {
+.status_messages {
+    margin-right: 8px;
+}
 
+.messages__days {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.messages__line {
+    border-top: 1px solid #EEEEEE;
+    width: 100%;
+}
+
+.messages__days-text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(0, 0, 0, 0.45);
+    padding: 10px 24px;
+    position: absolute;
 }
