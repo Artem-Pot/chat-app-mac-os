@@ -14,6 +14,17 @@
     flex-direction:column;   
 }
 
+.nav__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    flex: 1 1 auto;
+    position:fixed;
+    top: 0;
+    height: 370px;
+    margin-bottom: 10px;
+}
+
 .nav__box-profile {
     max-width: 36px;
     min-height: 122px;
@@ -25,6 +36,7 @@
 
 .nav__logo {
     margin-top: 27px;
+    cursor: pointer;
 }
 
 .nav__ico {
@@ -42,6 +54,7 @@
 
 .nav__menu {
     margin-bottom: 26px;
+    cursor: pointer;
 }
 
 .nav__menu_activ {
@@ -62,19 +75,24 @@
     display: flex;
     align-items: center;
     flex-direction:column;
+    position: sticky;
+    bottom: 0;
 }
 
 .nav__settings {
     margin-top: 12px;
+    cursor: pointer;
 }
 
 .nav__exit {
     margin-top: 24px;
+    cursor: pointer;
 }
 /*----------------------Список контактов--------------------*/
 .contact {
     max-width: 343px;
     border-right: 1px solid #EEEEEE ;
+    margin-left: 19px;
 }
 
 .contact__box-title {
@@ -122,6 +140,7 @@ input[type="search"]:focus {
     border: none;
     position:absolute;
     margin: 13px 0 0 12px;
+    cursor: pointer;
 }
 
 .contact__sort {
@@ -334,6 +353,7 @@ input[type="search"]:focus {
     display: flex;
     align-items: center;
     margin-left: 11px;
+    cursor: pointer;
 }
 
 .messages__name-status {
@@ -513,12 +533,12 @@ input[type="search"]:focus {
     height: 48px;
     display: flex;
     align-items: center;
-    background-color: #27AE60;
 }
 
 .form-messages {
     display: flex;
     align-items: center;
+    flex: 1 1 auto;
 }
 
 .form-messages__button {
@@ -538,9 +558,13 @@ input[type="text"] {
     border-radius: 12px;
     border: none;
     padding-left: 12px;
-    display: inline-block;
-    
+    margin-right: 12px;
+    display: flex;
+    width: 100%;
+}
 
+input[type="text"]:focus {
+    outline: none;
 }
 
 .form-messages__button_send {
@@ -552,12 +576,12 @@ input[type="text"] {
     line-height: 17px;
     color: #27AE60;
     width: 150px;
-    height: 17px;
+    height: 100%;
     margin: 0 18px 0 11px;
+    background: none;
 }
 
 .form-messages__button:hover {
     cursor: pointer;
 }
-
 
