@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 
 .conteiner {
     width: 100%;
@@ -11,7 +17,11 @@
     background: #FAFAFA;
     display: flex;
     align-items: center;
-    flex-direction:column;   
+    flex-direction:column; 
+    position: fixed;  
+    top: 0;
+    flex: 1 1 auto;
+   
 }
 
 .nav__wrapper {
@@ -32,6 +42,8 @@
     display: flex;
     align-items: center;
     flex-direction:column;
+    background: #FAFAFA;
+    
 }
 
 .nav__logo {
@@ -49,7 +61,8 @@
     display: flex;
     align-items: center;
     flex-direction:column;
-    flex: 1 1 auto;
+    flex: 1 1 100%;
+    min-height: 100%;
 }
 
 .nav__menu {
@@ -71,11 +84,11 @@
 .nav__box-settings {
     max-width: 42px;
     min-height: 84px;
-    margin-bottom: 0;
+    background-color: #FAFAFA;
     display: flex;
     align-items: center;
     flex-direction:column;
-    position: sticky;
+    position: fixed;
     bottom: 0;
 }
 
@@ -92,7 +105,9 @@
 .contact {
     max-width: 343px;
     border-right: 1px solid #EEEEEE ;
-    margin-left: 19px;
+    position: fixed;
+    left: 73px;
+    overflow: auto;
 }
 
 .contact__box-title {
@@ -183,8 +198,9 @@ input[type="search"]:focus {
 }
 
 .contact__box-contact:hover {
-    outline: 1px solid #27AE60;
+    border: 1px solid #27AE60;
     cursor: pointer;
+    border-radius: 5px solid #27AE60;
 }
 
 .contact__box-contact_typing {
@@ -215,7 +231,7 @@ input[type="search"]:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 16px;;
+    height: 16px;
     width: 253px;
 }
 .note {
@@ -227,8 +243,7 @@ input[type="search"]:focus {
     margin-left: 10px;
 }
 
-.contact__nick-name {
-    
+.contact__nick-name {    
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -245,7 +260,7 @@ input[type="search"]:focus {
     font-size: 14px;
     line-height: 16px;
     color: rgba(0, 0, 0, 0.85);
-    min-width: 150px;
+    max-width: 150px;
     height: 16px;
 }
 
@@ -253,7 +268,7 @@ input[type="search"]:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 16px;;
+    height: 16px;
     width: 253px;
     margin-top: 2px;
 }
@@ -264,6 +279,7 @@ input[type="search"]:focus {
     font-size: 14px;
     line-height: 16px;
     color: rgba(0, 0, 0, 0.45);
+    overflow: hidden;
 }
 
 .contact__message_not-viewed {
@@ -333,6 +349,8 @@ input[type="search"]:focus {
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-left: 392px;
+    
 }
 
 .messages__header {
@@ -502,7 +520,16 @@ input[type="search"]:focus {
     text-align: center;
 }
 
+.messages__line {
+    border-top: 1px solid #EEEEEE;
+    width: 100%;
+}
+
 .messages__days-text {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
     font-weight: 500;
     font-size: 12px;
     line-height: 14px;
@@ -515,6 +542,7 @@ input[type="search"]:focus {
     display: inline-block;
     width: 100%;
     border-top: 1px solid #EEEEEE;
+    z-index: -1;
     position: relative;
     vertical-align: middle;
 }
@@ -533,6 +561,10 @@ input[type="search"]:focus {
     height: 48px;
     display: flex;
     align-items: center;
+    background-color: #FAFAFA;
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
 }
 
 .form-messages {
